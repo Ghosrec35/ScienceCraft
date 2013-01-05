@@ -17,20 +17,21 @@ public class ClientTickHandler implements ITickHandler
 	public void tickEnd(EnumSet<TickType> type, Object... tickData) 
 	{
 		if (type.equals(EnumSet.of(TickType.RENDER)))
-        {
-            onRenderTick();
-        }
-        else if (type.equals(EnumSet.of(TickType.CLIENT)))
-        {
-        	Minecraft mc = Minecraft.getMinecraft();
-            GuiScreen guiscreen = Minecraft.getMinecraft().currentScreen;
-            if (guiscreen != null)
-            {
-                onTickInGUI(mc, guiscreen);
-            } else {
-                onTickInGame(mc);
-            }
-        }	
+        	{
+            		onRenderTick();
+       		}
+        	else if (type.equals(EnumSet.of(TickType.CLIENT)))
+        	{
+        		Minecraft mc = Minecraft.getMinecraft();
+           		GuiScreen guiscreen = Minecraft.getMinecraft().currentScreen;
+           		
+            		if (guiscreen != null)
+            		{
+                		onTickInGUI(mc, guiscreen);
+            		} else {
+                		onTickInGame(mc);
+            		}
+            	}	
 	}
 
 	@Override
