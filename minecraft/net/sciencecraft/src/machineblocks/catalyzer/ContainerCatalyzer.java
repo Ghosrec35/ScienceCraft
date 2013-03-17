@@ -1,11 +1,10 @@
 package net.sciencecraft.src.machineblocks.catalyzer;
 
-import universalelectricity.extend.IItemElectric;
-import net.minecraft.src.Container;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.InventoryPlayer;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.Slot;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
 
 public class ContainerCatalyzer extends Container 
 {
@@ -42,7 +41,7 @@ public class ContainerCatalyzer extends Container
 	}
 	
 	@Override
-	public ItemStack transferStackInSlot(int inventorySlot)
+	public ItemStack transferStackInSlot(EntityPlayer player, int inventorySlot)
 	{
 		ItemStack itemstack = null;
 		

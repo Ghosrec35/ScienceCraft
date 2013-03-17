@@ -2,8 +2,8 @@ package net.sciencecraft.src;
 
 import java.util.List;
 
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class ItemGasJar extends Item 
 {
@@ -17,7 +17,7 @@ public class ItemGasJar extends Item
 	
 	public void addInformation(ItemStack itemstack, List list)
 	{
-		if(itemstack.itemID == this.shiftedIndex)
+		if(itemstack.itemID == this.itemID)
 		{
 			list.add("A jar used for collecting gases!");
 		}

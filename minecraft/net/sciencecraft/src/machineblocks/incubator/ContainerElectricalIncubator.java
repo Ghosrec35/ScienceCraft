@@ -1,12 +1,10 @@
 package net.sciencecraft.src.machineblocks.incubator;
 
-import universalelectricity.extend.IItemElectric;
-import net.minecraft.src.Container;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.InventoryPlayer;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.Slot;
-import net.sciencecraft.src.machineblocks.refiner.RefinerRecipes;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
 
 public class ContainerElectricalIncubator extends Container
 {
@@ -42,7 +40,7 @@ public class ContainerElectricalIncubator extends Container
 	}
 	
 	@Override
-	public ItemStack transferStackInSlot(int inventorySlot)
+	public ItemStack transferStackInSlot(EntityPlayer player, int inventorySlot)
 	{
 		ItemStack itemstack = null;
 		Slot slot = (Slot)this.inventorySlots.get(inventorySlot);
@@ -113,7 +111,7 @@ public class ContainerElectricalIncubator extends Container
 				return null;
 			}
 			
-			slot.onPickupFromSlot(itemstack1);
+			slot.onPickupFromSlot(player, itemstack1);
 		}
 		return itemstack;
 	}

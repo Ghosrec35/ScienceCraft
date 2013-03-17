@@ -1,8 +1,6 @@
 package net.sciencecraft.src.machineblocks.teleporter;
 
-import universalelectricity.extend.BlockMachine;
-import net.minecraft.src.Block;
-import net.minecraft.src.Material;
+import net.minecraft.block.material.Material;
 
 public abstract class BlockMachineTeleporter extends BlockMachine implements ITeleportationManager 
 {

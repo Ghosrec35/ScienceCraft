@@ -1,20 +1,16 @@
 package net.sciencecraft.src.machineblocks.dnasequencer;
 
-import com.google.common.io.ByteArrayDataInput;
-
-import net.minecraft.src.Entity;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.IInventory;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.NetworkManager;
-import net.minecraft.src.Packet250CustomPayload;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
+import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.ISidedInventory;
 import net.sciencecraft.src.network.IPacketReceiver;
 import net.sciencecraft.src.network.PacketHandler;
-import universalelectricity.electricity.ElectricityManager;
-import universalelectricity.electricity.TileEntityElectricUnit;
-import universalelectricity.extend.IItemElectric;
+
+import com.google.common.io.ByteArrayDataInput;
 
 public class TileEntityDNASequencer extends TileEntityElectricUnit implements IInventory, ISidedInventory, IPacketReceiver
 {

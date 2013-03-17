@@ -1,13 +1,12 @@
 package net.sciencecraft.src.machineblocks.catalyzer;
 
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.EntityXPOrb;
-import net.minecraft.src.IInventory;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.MathHelper;
-import net.minecraft.src.Slot;
+import net.minecraft.entity.item.EntityXPOrb;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.MathHelper;
 import net.sciencecraft.src.ScienceCraft;
-import net.sciencecraft.src.machineblocks.refiner.RefinerRecipes;
 
 public class SlotCatalyzer extends Slot 
 {
@@ -38,7 +37,7 @@ public class SlotCatalyzer extends Slot
 	public void onPickupFromSlot(ItemStack itemstack)
 	{
 		this.onCrafting(itemstack);
-		super.onPickupFromSlot(itemstack);
+		super.onPickupFromSlot(player, itemstack);
 	}
 	
 	protected void onCrafting(ItemStack itemstack, int i)

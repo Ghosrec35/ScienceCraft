@@ -1,18 +1,10 @@
 package net.sciencecraft.src.machineblocks.refiner;
 
-import java.util.Iterator;
-
-import universalelectricity.extend.IItemElectric;
-
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
-
-import net.minecraft.src.Container;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.ICrafting;
-import net.minecraft.src.InventoryPlayer;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.Slot;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
 
 public class ContainerRefiner extends Container 
 {
@@ -48,7 +40,7 @@ public class ContainerRefiner extends Container
 	}
 	
 	@Override
-	public ItemStack transferStackInSlot(int inventorySlot)
+	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int inventorySlot)
 	{
 		ItemStack itemstack = null;
 		Slot slot = (Slot)this.inventorySlots.get(inventorySlot);
@@ -119,7 +111,7 @@ public class ContainerRefiner extends Container
 				return null;
 			}
 			
-			slot.onPickupFromSlot(itemstack1);
+			slot.onPickupFromSlot(par1EntityPlayer, itemstack1);
 		}
 		return itemstack;
 	}

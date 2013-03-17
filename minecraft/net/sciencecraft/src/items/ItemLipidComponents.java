@@ -1,6 +1,6 @@
 package net.sciencecraft.src.items;
 
-import net.minecraft.src.Item;
+import net.minecraft.item.Item;
 
 
 public class ItemLipidComponents extends Item 

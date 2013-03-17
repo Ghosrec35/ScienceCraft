@@ -1,6 +1,6 @@
 package net.sciencecraft.src.machineblocks.teleporter;
 
-import net.minecraft.src.Material;
+import net.minecraft.block.material.Material;
 
 public abstract class BlockSpecialTeleporter extends BlockMachineTeleporter implements ISpecialTeleporter
 {

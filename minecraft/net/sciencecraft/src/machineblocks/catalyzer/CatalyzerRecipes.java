@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.minecraft.src.ItemStack;
+import net.minecraft.item.ItemStack;
 import net.sciencecraft.src.ScienceCraft;
 
 public class CatalyzerRecipes 
@@ -23,8 +23,8 @@ public class CatalyzerRecipes
 	
 	public CatalyzerRecipes()
 	{
-		this.addCatalyzationEvent(ScienceCraft.registry.refinedSugar.shiftedIndex, new ItemStack(ScienceCraft.registry.glucose), new ItemStack(ScienceCraft.registry.fructose), 0.5F);
-		this.addCatalyzationEvent(ScienceCraft.registry.lactoseSugar.shiftedIndex, new ItemStack(ScienceCraft.registry.glucose), new ItemStack(ScienceCraft.registry.galactose), 0.5F);
+		this.addCatalyzationEvent(ScienceCraft.registry.refinedSugar.itemID, new ItemStack(ScienceCraft.registry.glucose), new ItemStack(ScienceCraft.registry.fructose), 0.5F);
+		this.addCatalyzationEvent(ScienceCraft.registry.lactoseSugar.itemID, new ItemStack(ScienceCraft.registry.glucose), new ItemStack(ScienceCraft.registry.galactose), 0.5F);
 	}
 	
 	public void addCatalyzationEvent(int id, ItemStack product, ItemStack product2, Float f)

@@ -2,7 +2,7 @@ package net.sciencecraft.src.items;
 
 import java.util.List;
 
-import net.minecraft.src.ItemStack;
+import net.minecraft.item.ItemStack;
 
 public class ItemFADH extends ItemEnergyMolecules 
 {

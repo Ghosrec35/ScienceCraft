@@ -4,9 +4,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.minecraft.src.Block;
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.sciencecraft.src.ScienceCraft;
 
 public class RefinerRecipes 
@@ -25,8 +24,8 @@ public class RefinerRecipes
 	private RefinerRecipes()
 	{
 		this.addRefining(ScienceCraft.registry.oreSalt.blockID, new ItemStack(ScienceCraft.registry.salt), 0.6F);
-		this.addRefining(Item.sugar.shiftedIndex, new ItemStack(ScienceCraft.registry.refinedSugar), 0.4F);
-		this.addRefining(Item.bucketMilk.shiftedIndex, new ItemStack(ScienceCraft.registry.lactoseSugar), 0.5F);
+		this.addRefining(Item.sugar.itemID, new ItemStack(ScienceCraft.registry.refinedSugar), 0.4F);
+		this.addRefining(Item.bucketMilk.itemID, new ItemStack(ScienceCraft.registry.lactoseSugar), 0.5F);
 	}
 	
 	public void addRefining(int i, ItemStack itemstack, float f)

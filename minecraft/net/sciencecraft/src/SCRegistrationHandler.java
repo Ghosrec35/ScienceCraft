@@ -2,21 +2,15 @@ package net.sciencecraft.src;
 
 import java.util.HashMap;
 
-import cpw.mods.fml.client.registry.KeyBindingRegistry;
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import cpw.mods.fml.common.registry.TickRegistry;
-import net.minecraft.src.Achievement;
-import net.minecraft.src.Block;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.EnumArmorMaterial;
-import net.minecraft.src.EnumToolMaterial;
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.Material;
-import net.minecraft.src.TileEntity;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumArmorMaterial;
+import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.stats.Achievement;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
@@ -45,6 +39,12 @@ import net.sciencecraft.src.machineblocks.refiner.BlockRefiner;
 import net.sciencecraft.src.machineblocks.refiner.TileEntityRefiner;
 import net.sciencecraft.src.machineblocks.teleporter.TeleportationManager;
 import net.sciencecraft.src.machineblocks.teleporter.TileEntityTeleporter;
+import cpw.mods.fml.client.registry.KeyBindingRegistry;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+import cpw.mods.fml.common.registry.TickRegistry;
+import cpw.mods.fml.relauncher.Side;
 
 public class SCRegistrationHandler 
 {

@@ -1,12 +1,6 @@
 package net.sciencecraft.src.machineblocks.teleporter;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
 import net.minecraftforge.common.ForgeDirection;
-
-import universalelectricity.electricity.TileEntityElectricUnit;
 
 public class TileEntityTeleporter extends TileEntityElectricUnit
 {

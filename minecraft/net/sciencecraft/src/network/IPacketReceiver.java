@@ -1,13 +1,12 @@
 package net.sciencecraft.src.network;
 
-import com.google.common.io.ByteArrayDataInput;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.network.INetworkManager;
+import net.minecraft.network.packet.Packet250CustomPayload;
 
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.NetworkManager;
-import net.minecraft.src.Packet250CustomPayload;
-import cpw.mods.fml.common.network.Player;
+import com.google.common.io.ByteArrayDataInput;
 
 public interface IPacketReceiver 
 {
-	public void handlePacketData(NetworkManager manager, Packet250CustomPayload packet, EntityPlayer player, ByteArrayDataInput input);
+	public void handlePacketData(INetworkManager manager, Packet250CustomPayload packet, EntityPlayer player, ByteArrayDataInput input);
 }

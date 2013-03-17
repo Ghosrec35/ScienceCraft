@@ -1,22 +1,22 @@
 package net.sciencecraft.src.machineblocks.incubator;
 
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
-import net.minecraft.src.Block;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.IInventory;
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemBlock;
-import net.minecraft.src.ItemHoe;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.ItemSword;
-import net.minecraft.src.ItemTool;
-import net.minecraft.src.Material;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.NBTTagList;
-import net.minecraft.src.TileEntity;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.ISidedInventory;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class TileEntityIncubator extends TileEntity implements IInventory, ISidedInventory
 {
@@ -297,7 +297,7 @@ public class TileEntityIncubator extends TileEntity implements IInventory, ISide
     	}
     	else
     	{
-    		int itemID = itemstack.getItem().shiftedIndex;
+    		int itemID = itemstack.getItem().itemID;
     		Item item = itemstack.getItem();
     		
     		if(itemstack.getItem() instanceof ItemBlock && Block.blocksList[itemID] != null)
@@ -315,14 +315,14 @@ public class TileEntityIncubator extends TileEntity implements IInventory, ISide
     			}
     		}
     		
-            if (item instanceof ItemTool && ((ItemTool) item).func_77861_e().equals("WOOD")) return 200;
-            if (item instanceof ItemSword && ((ItemSword) item).func_77825_f().equals("WOOD")) return 200;
+            if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item instanceof ItemSword && ((ItemSword) item).getToolMaterialName().equals("WOOD")) return 200;
             if (item instanceof ItemHoe && ((ItemHoe) item).func_77842_f().equals("WOOD")) return 200;
-            if (itemID == Item.stick.shiftedIndex) return 200;
-            if (itemID == Item.coal.shiftedIndex) return 3200;
-            if (itemID == Item.bucketLava.shiftedIndex) return 40000;
+            if (itemID == Item.stick.itemID) return 200;
+            if (itemID == Item.coal.itemID) return 3200;
+            if (itemID == Item.bucketLava.itemID) return 40000;
             if (itemID == Block.sapling.blockID) return 800;
-            if (itemID == Item.blazeRod.shiftedIndex) return 4800;
+            if (itemID == Item.blazeRod.itemID) return 4800;
             return 0;
     	}
     }
@@ -343,4 +343,16 @@ public class TileEntityIncubator extends TileEntity implements IInventory, ISide
 
 	@Override
 	public void closeChest() {}
+
+	@Override
+	public boolean func_94042_c() 
+	{
+		return false;
+	}
+
+	@Override
+	public boolean func_94041_b(int i, ItemStack itemstack) 
+	{
+		return false;
+	}
 }

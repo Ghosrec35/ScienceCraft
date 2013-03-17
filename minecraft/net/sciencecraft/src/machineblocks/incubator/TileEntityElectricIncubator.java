@@ -1,23 +1,18 @@
 package net.sciencecraft.src.machineblocks.incubator;
 
-import com.google.common.io.ByteArrayDataInput;
-
-import universalelectricity.electricity.ElectricityManager;
-import universalelectricity.electricity.TileEntityElectricUnit;
-import universalelectricity.extend.IItemElectric;
-import net.minecraft.src.Entity;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.IInventory;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.NBTTagList;
-import net.minecraft.src.NetworkManager;
-import net.minecraft.src.Packet250CustomPayload;
-import net.minecraft.src.TileEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.ISidedInventory;
 import net.sciencecraft.src.network.IPacketReceiver;
 import net.sciencecraft.src.network.PacketHandler;
+
+import com.google.common.io.ByteArrayDataInput;
 
 public class TileEntityElectricIncubator extends TileEntityElectricUnit implements IInventory, ISidedInventory, IPacketReceiver
 {
